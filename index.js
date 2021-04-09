@@ -9,7 +9,7 @@
 
 // pig latin function
 //  if begins with consonant
-//      need regex for consonants
+//      find index of first vowel
 //      slice [0:first vowel] and set to var
 //      append slice to end of string
 //
@@ -26,25 +26,16 @@ const languageCoverter = (str, languageChoice) => {
 };
 
 const pigLatin = (arr) => {
+  //   console.log(arr);
   for (const word in arr) {
-    if (arr[word].startsWith("a")) {
-      console.log("starts with a");
-    }
-    if (arr[word].startsWith("e")) {
-      console.log("starts with e");
-    }
-    if (arr[word].startsWith("i")) {
-      console.log("starts with i");
-    }
-    if (arr[word].startsWith("o")) {
-      console.log("starts with o");
-    }
-    if (arr[word].startsWith("u")) {
-      console.log("starts with u");
-    }
-    arr[word] = arr[word] + "-ay";
+    const vowelRegex = /[aeiouy]/gi;
+    let vowelIndex = arr[word].search(vowelRegex);
+    let backSlice = arr[word].slice(0, vowelIndex);
+    let frontSlice = arr[word].slice(vowelIndex);
+
+    arr[word] = frontSlice + `-${backSlice}ay`;
   }
-  console.log(arr);
+  //   console.log(arr);
   return arr;
 };
 
