@@ -9,7 +9,7 @@
 
 // pig latin function
 //  if begins with consonant
-//      newString var
+//      need regex for consonants
 //      slice [0:first vowel] and set to var
 //      append slice to end of string
 //
@@ -27,6 +27,21 @@ const pigLatinGenerator = (str) => {
 
 const converter = (arr) => {
   for (const word in arr) {
+    if (arr[word].startsWith("a")) {
+      console.log("starts with a");
+    }
+    if (arr[word].startsWith("e")) {
+      console.log("starts with e");
+    }
+    if (arr[word].startsWith("i")) {
+      console.log("starts with i");
+    }
+    if (arr[word].startsWith("o")) {
+      console.log("starts with o");
+    }
+    if (arr[word].startsWith("u")) {
+      console.log("starts with u");
+    }
     arr[word] = arr[word] + "-ay";
   }
   console.log(arr);
