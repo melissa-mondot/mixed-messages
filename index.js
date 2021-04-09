@@ -17,15 +17,15 @@
 //  append "ay" to end of new string
 //  return newString
 
-const pigLatinGenerator = (str) => {
+const languageCoverter = (str, languageChoice) => {
   const strArr = str.split(" ");
-  const newStr = converter(strArr);
+  const newStr = languageChoice(strArr);
   const finalStr = newStr.join(" ");
 
   return finalStr;
 };
 
-const converter = (arr) => {
+const pigLatin = (arr) => {
   for (const word in arr) {
     if (arr[word].startsWith("a")) {
       console.log("starts with a");
@@ -50,4 +50,4 @@ const converter = (arr) => {
 
 const testStr = "Hello my name is Simon.";
 
-console.log(pigLatinGenerator(testStr));
+console.log(languageCoverter(testStr, pigLatin));
