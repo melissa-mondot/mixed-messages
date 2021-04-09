@@ -25,7 +25,10 @@ const pigLatinGenerator = (str) => {
 };
 
 const converter = (arr) => {
-  console.log("converting array now");
+  for (const word in arr) {
+    arr[word] = arr[word] + "-ay";
+  }
+  console.log(arr);
   return arr;
 };
 
