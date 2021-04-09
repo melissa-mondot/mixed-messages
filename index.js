@@ -13,6 +13,7 @@
 //      slice [0:first vowel] and set to var
 //      append slice to end of string
 //
+//  TODO: find and avoid sentence punctuation
 //  append "ay" to end of new string
 //  return newString
 
