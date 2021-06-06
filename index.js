@@ -17,7 +17,7 @@
 //  append "ay" to end of new string
 //  return newString
 
-const languageCoverter = (str, languageChoice) => {
+const languageConverter = (str, languageChoice) => {
   const strArr = str.split(" ");
   const newStr = languageChoice(strArr);
   const finalStr = newStr.join(" ");
@@ -41,4 +41,4 @@ const pigLatin = (arr) => {
 
 const testStr = "Hello my name is Simon.";
 
-console.log(languageCoverter(testStr, pigLatin));
+console.log(languageConverter(testStr, pigLatin));
